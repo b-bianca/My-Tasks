@@ -1,10 +1,10 @@
 export class User {
-  id;
-  firstName;
-  lastName;
-  email;
-  password;
-  createdAt;
-  updateAt;
-  active;
+  id: string;
+  firstName: string;
+  lastName: string;
+  email: string;
+  password: string;
+  createdAt: Date;
+  updateAt: Date;
+  active?: boolean;
 }

@@ -2,6 +2,7 @@ import { PartialType } from '@nestjs/mapped-types';
 import {
   IsBoolean,
   IsEmail,
+  IsNotEmpty,
   IsString,
   MaxLength,
   MinLength,
@@ -16,12 +17,12 @@ export class UpdateUserDto extends PartialType(CreateUserDto) {
   lastName: string;
 
   @IsEmail()
+  @IsNotEmpty()
   email: string;
 
   @MinLength(6)
   @MaxLength(20)
   password: string;
 
-  @IsBoolean()
-  active: boolean;
+  active?: boolean;
 }
